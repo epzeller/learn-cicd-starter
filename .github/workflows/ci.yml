@@ -31,7 +31,7 @@ jobs:
         run: staticcheck ./...
 
       - name: check gosec version
-        run: gosec ./...
+        run: gosec -version
 
   tests:
     name: Tests

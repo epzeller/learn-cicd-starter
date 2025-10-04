@@ -23,7 +23,7 @@ jobs:
 
   Lint:
     name: Lint
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Install staticcheck

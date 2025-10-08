@@ -42,7 +42,7 @@ jobs:
     - name: push to artifactory
       run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-474418/notely-ar-repo/notely:latest .
 
-    - name: Database Migration
+    - name: migrateup.sh
       run: ./scripts/migrateup.sh
 
     - name: Deploy to Cloud Run
@@ -53,5 +53,3 @@ jobs:
         --allow-unauthenticated \
         --project notely-474418 \
         --max-instances=4
-
-        # libsql://notely-db-epzeller.aws-us-east-2.turso.io 
